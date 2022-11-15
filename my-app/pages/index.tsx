@@ -94,7 +94,10 @@ export default function Home() {
           </Link>
 
           <Link
-            href="/user/2/3"
+            href={{
+              pathname: '/user/2/3',
+              query: { name: '名前' },
+            }}
             className={styles.card}
           >
             <h2>Dynamic Routing &rarr;</h2>
