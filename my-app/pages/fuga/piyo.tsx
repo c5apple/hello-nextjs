@@ -1,3 +1,9 @@
+export async function getStaticProps() {
+  return {
+    props: { title: 'ぴよ' }
+  }
+}
+
 export default function Piyo() {
   const ans = 1 + 1;
 
