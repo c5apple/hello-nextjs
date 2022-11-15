@@ -4,6 +4,9 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const users = [{ id: 1 }, { id: 2 }];
+
   return (
     <div className={styles.container}>
       <Head>
@@ -69,13 +72,18 @@ export default function Home() {
             <p>/fuga/piyo</p>
           </Link>
 
-          <Link
-            href="/user/1"
-            className={styles.card}
-          >
-            <h2>Dynamic Routing &rarr;</h2>
-            <p>/user/1</p>
-          </Link>
+          {users.map((user, index) => {
+            return (
+              <Link
+                href={`/user/${user.id}`}
+                className={styles.card}
+                key={index}
+              >
+                <h2>aDynamic Routing &rarr;</h2>
+                <p>/user/{user.id}</p>
+              </Link>
+            )
+          })}
 
           <Link
             href="/user/2"
