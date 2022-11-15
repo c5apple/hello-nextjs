@@ -68,6 +68,30 @@ export default function Home() {
             <h2>Next Page &rarr;</h2>
             <p>/fuga/piyo</p>
           </Link>
+
+          <Link
+            href="/user/1"
+            className={styles.card}
+          >
+            <h2>Dynamic Routing &rarr;</h2>
+            <p>/user/1</p>
+          </Link>
+
+          <Link
+            href="/user/2"
+            className={styles.card}
+          >
+            <h2>Dynamic Routing &rarr;</h2>
+            <p>/user/2</p>
+          </Link>
+
+          <Link
+            href="/user/2/3"
+            className={styles.card}
+          >
+            <h2>Dynamic Routing &rarr;</h2>
+            <p>/user/2/3</p>
+          </Link>
         </div>
       </main>
 
